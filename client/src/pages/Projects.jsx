@@ -90,7 +90,7 @@ function Projects() {
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 {project.image && (
                   <img
-                    src={`http://localhost:5000/${project.image}`}
+                    src={`https://fullsatck-project-by-vineet-suman-server.onrender.com/${project.image}`}
                     alt={project.name}
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
