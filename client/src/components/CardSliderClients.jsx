@@ -10,7 +10,7 @@ const CardSliderClients = () => {
     // Fetch clients data from internal API
     const fetchClients = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/clients'); // Replace with your actual internal API endpoint
+        const response = await fetch('https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients'); // Replace with your actual internal API endpoint
         const data = await response.json();
         setClients(data);
       } catch (error) {
@@ -37,7 +37,7 @@ const CardSliderClients = () => {
             <div className="bg-white rounded-lg p-6" style={{ boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.15)' }}>
               <div className="flex justify-center mb-4">
                 <img
-                  src={`http://localhost:5000/${client.image}`}
+                  src={`https://fullsatck-project-by-vineet-suman-server.onrender.com/${client.image}`}
                   alt={client.name}
                   className="w-20 h-20 object-cover rounded-full border-4"
                 />
