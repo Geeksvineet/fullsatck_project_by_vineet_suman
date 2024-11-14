@@ -1,15 +1,36 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const connectDB = require('./config/db');
+const path = require('path');
 
 dotenv.config();
 connectDB();
 
 const app = express();
+// Serve static files (images) from the 'uploadsProjects' folder
+app.use('/uploadsProjects', express.static(path.join(__dirname, 'uploadsProjects')));
+app.use('/uploadsClients', express.static(path.join(__dirname, 'uploadsClients')));
+
+
 app.use(express.json());
 
-// Placeholder for routes
-app.get('/', (req, res) => res.send('API Running'));
+// Enable CORS for the frontend origin
+app.use(cors({ origin: 'http://localhost:5173' }));
+
+// Import routes
+const authRoutes = require('./routes/authRoutes');
+const projectRoutes = require('./routes/projectRoutes');
+const clientRoutes = require('./routes/clientRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+const subscriptionRoutes = require('./routes/subscriptionRoutes');
+
+// Define routes
+app.use('/api/auth', authRoutes);
+app.use('/api/projects', projectRoutes);
+app.use('/api/clients', clientRoutes);
+app.use('/api/contacts', contactRoutes);
+app.use('/api/subscriptions', subscriptionRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
