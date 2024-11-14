@@ -6,6 +6,3 @@ server/node_modules/
 # Environment files
 client/.env
 server/.env
-
-# Vite build files
-client/dist/

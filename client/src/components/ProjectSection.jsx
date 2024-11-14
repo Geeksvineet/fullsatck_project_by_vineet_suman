@@ -11,7 +11,7 @@ const ProjectSection = () => {
     // Fetch projects from the backend
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects");
+        const response = await axios.get("http://localhost:5000/api/projects");
         
         console.log("API response:", response.data); // Debug log for API response
         
