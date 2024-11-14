@@ -10,7 +10,7 @@ const CardSlider = () => {
     // Fetch projects data from internal API
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/projects"); // Replace with your actual internal API endpoint
+        const response = await fetch("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects"); // Replace with your actual internal API endpoint
         const data = await response.json();
         setProjects(data);
       } catch (error) {
@@ -36,7 +36,7 @@ const CardSlider = () => {
           <SwiperSlide key={project.id}>
             <div className="bg-white rounded-lg shadow-lg p-4 text-center">
               <img
-                src={`http://localhost:5000/${project.image}`}
+                src={`https://fullsatck-project-by-vineet-suman-server.onrender.com/${project.image}`}
                 alt={project.name}
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
