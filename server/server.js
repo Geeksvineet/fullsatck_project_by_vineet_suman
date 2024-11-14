@@ -16,7 +16,7 @@ app.use('/uploadsClients', express.static(path.join(__dirname, 'uploadsClients')
 app.use(express.json());
 
 // Enable CORS for the frontend origin
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://fullsatck-project-by-vineet-suman-client.onrender.com' }));
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
