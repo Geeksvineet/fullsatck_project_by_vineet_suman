@@ -124,7 +124,7 @@ function Clients() {
             closeModal={() => setIsModalOpen(false)}
             fetchClients={async () => {
               const token = sessionStorage.getItem("token");
-              const response = await axios.get("/api/clients", {
+              const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients", {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
