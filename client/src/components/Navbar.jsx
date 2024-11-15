@@ -4,7 +4,7 @@ function Navbar() {
     const handleLogout = async () => {
         try {
             const token = sessionStorage.getItem('token'); // Assuming token is stored in sessionStorage for this example
-            const response = await fetch('/api/auth/logout', {
+            const response = await fetch('https://fullsatck-project-by-vineet-suman-server.onrender.com/api/auth/logout', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
