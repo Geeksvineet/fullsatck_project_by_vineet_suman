@@ -15,7 +15,7 @@ function Clients() {
     async function fetchClients() {
       const token = sessionStorage.getItem("token");
       try {
-        const response = await axios.get("/api/clients", {
+        const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +48,7 @@ function Clients() {
   const deleteClient = async (clientId) => {
     const token = sessionStorage.getItem("token");
     try {
-      await axios.delete(`/api/clients/${clientId}`, {
+      await axios.delete(`https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients/${clientId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
