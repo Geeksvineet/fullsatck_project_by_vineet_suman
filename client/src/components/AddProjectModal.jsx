@@ -44,7 +44,7 @@ function AddProjectModal({ projectToEdit, closeModal, fetchProjects }) {
       let response;
       if (projectToEdit) {
         // Editing existing project
-        response = await axios.put(`/api/projects/${projectToEdit._id}`, formData, {
+        response = await axios.put(`https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects/${projectToEdit._id}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ function AddProjectModal({ projectToEdit, closeModal, fetchProjects }) {
         });
       } else {
         // Adding new project
-        response = await axios.post("/api/projects", formData, {
+        response = await axios.post("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
