@@ -15,7 +15,7 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/subscriptions", {
+      const response = await fetch("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/subscriptions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
