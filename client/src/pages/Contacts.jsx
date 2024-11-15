@@ -10,7 +10,7 @@ function Contacts() {
     async function fetchContacts() {
       const token = sessionStorage.getItem("token"); // Get token from sessionStorage
       try {
-        const response = await axios.get("/api/contacts", {
+        const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/contacts", {
           headers: {
             Authorization: `Bearer ${token}`, // Add token to the Authorization header
           },
@@ -31,7 +31,7 @@ function Contacts() {
   const deleteContact = async (contactId) => {
     const token = sessionStorage.getItem("token");
     try {
-      await axios.delete(`/api/contacts/${contactId}`, {
+      await axios.delete(`https://fullsatck-project-by-vineet-suman-server.onrender.com/api/contacts/${contactId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
