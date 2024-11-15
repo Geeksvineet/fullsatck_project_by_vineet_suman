@@ -17,7 +17,7 @@ const HeroSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/contacts", formData);
+      const response = await axios.post("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/contacts", formData);
       alert("Thank you! Your consultation request has been submitted.");
       setFormData({ fullName: "", email: "", mobile: "", city: "" });
     } catch (error) {
