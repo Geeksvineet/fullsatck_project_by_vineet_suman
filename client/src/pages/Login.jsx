@@ -13,7 +13,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/auth/login', { username, password });
+            const response = await axios.post('https://fullsatck-project-by-vineet-suman-server.onrender.com/api/auth/login', { username, password });
             if (response.status === 200) {
                 // Save the token in sessionStorage
                 sessionStorage.setItem('token', response.data.token);
