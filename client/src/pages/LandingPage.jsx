@@ -31,11 +31,11 @@ function LandingPage() {
   // Fetch projects and clients from the backend
   useEffect(() => {
     const fetchProjects = async () => {
-      const res = await axios.get("/api/projects"); // replace with your backend endpoint
+      const res = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects"); // replace with your backend endpoint
       setProjects(res.data);
     };
     const fetchClients = async () => {
-      const res = await axios.get("/api/clients"); // replace with your backend endpoint
+      const res = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients"); // replace with your backend endpoint
       setClients(res.data);
     };
     fetchProjects();
