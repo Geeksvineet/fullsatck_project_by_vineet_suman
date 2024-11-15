@@ -15,7 +15,7 @@ function Projects() {
     async function fetchProjects() {
       const token = sessionStorage.getItem("token"); // Get token from sessionStorage
       try {
-        const response = await axios.get("/api/projects", {
+        const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects", {
           headers: {
             Authorization: `Bearer ${token}`, // Add token to the Authorization header
           },
@@ -48,7 +48,7 @@ function Projects() {
   const deleteProject = async (projectId) => {
     const token = sessionStorage.getItem("token");
     try {
-      await axios.delete(`/api/projects/${projectId}`, {
+      await axios.delete(`https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects/${projectId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -120,7 +120,7 @@ function Projects() {
             closeModal={() => setIsModalOpen(false)}
             fetchProjects={async () => {
               const token = sessionStorage.getItem("token");
-              const response = await axios.get("/api/projects", {
+              const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects", {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
