@@ -18,10 +18,10 @@ function Dashboard() {
             const token = sessionStorage.getItem("token");
             try {
                 const [projectsRes, clientsRes, contactsRes, subscriptionsRes] = await Promise.all([
-                    axios.get("/api/projects", { headers: { Authorization: `Bearer ${token}` }}),
-                    axios.get("/api/clients", { headers: { Authorization: `Bearer ${token}` }}),
-                    axios.get("/api/contacts", { headers: { Authorization: `Bearer ${token}` }}),
-                    axios.get("/api/subscriptions", { headers: { Authorization: `Bearer ${token}` }}),
+                    axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/projects", { headers: { Authorization: `Bearer ${token}` }}),
+                    axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients", { headers: { Authorization: `Bearer ${token}` }}),
+                    axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/contacts", { headers: { Authorization: `Bearer ${token}` }}),
+                    axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/subscriptions", { headers: { Authorization: `Bearer ${token}` }}),
                 ]);
 
                 // Manually count each section's length from the response data arrays
