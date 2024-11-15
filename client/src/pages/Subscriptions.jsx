@@ -10,7 +10,7 @@ function Subscriptions() {
     async function fetchSubscriptions() {
       const token = sessionStorage.getItem("token"); // Get token from sessionStorage
       try {
-        const response = await axios.get("/api/subscriptions", {
+        const response = await axios.get("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/subscriptions", {
           headers: {
             Authorization: `Bearer ${token}`, // Add token to the Authorization header
           },
@@ -31,7 +31,7 @@ function Subscriptions() {
   const deleteSubscription = async (subscriptionId) => {
     const token = sessionStorage.getItem("token");
     try {
-      await axios.delete(`/api/subscriptions/${subscriptionId}`, {
+      await axios.delete(`https://fullsatck-project-by-vineet-suman-server.onrender.com/api/subscriptions/${subscriptionId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
