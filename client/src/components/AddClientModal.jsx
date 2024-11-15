@@ -46,7 +46,7 @@ function AddClientModal({ clientToEdit, closeModal, fetchClients }) {
       let response;
       if (clientToEdit) {
         // Editing existing client
-        response = await axios.put(`/api/clients/${clientToEdit._id}`, formData, {
+        response = await axios.put(`https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients/${clientToEdit._id}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ function AddClientModal({ clientToEdit, closeModal, fetchClients }) {
         });
       } else {
         // Adding new client
-        response = await axios.post("/api/clients", formData, {
+        response = await axios.post("https://fullsatck-project-by-vineet-suman-server.onrender.com/api/clients", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
