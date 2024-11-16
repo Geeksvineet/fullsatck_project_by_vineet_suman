@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import heroImage from "./../assets/images/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home.svg";
+import heroImage from './../assets/images/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home.svg';
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
